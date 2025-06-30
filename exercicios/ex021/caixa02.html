@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grouping Tags</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: dimgray;
+            margin: 0px;
+        }
+        header {
+            background-color: lightgray;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: rgb(102, 102, 102);
+            padding: 3px;
+            box-shadow: 5px 3px 7px  1px black;
+        }
+
+        nav > a {
+            text-decoration: none;
+            color: aliceblue;
+            font-weight: bold;
+            margin-right: 30px;
+        }
+
+        nav > a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            background-color: white;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 5px;
+            box-shadow: 4px 3px 9px 0px rgba(0, 0, 0, 0.384);
+        }
+
+        article {
+            background-color: lightblue;
+            padding: 10px;
+        }
+        article > aside {
+            background-color: lightgreen;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        footer {
+            background-color: lightgray;
+            padding: 10px;
+            text-align: center;
+            padding: 1px;
+            margin: 0px;
+        }
+
+        footer > p {
+            maring: 0px;
+        }
+
+        div#bola {
+            background-color: red;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            position: absolute;
+            top: 86%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Exemplos de caixa box-level</h1>
+        <p>Parágrafos também são exemplos de box-level, mas os <a href="#">links são exemplos de caixas inline-level</a>. Vamos ver como tudo isso funciona.</p>
+
+        <nav>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+        </nav>
+    </header>
+    <main>
+        <section id="assuntos">
+            <p>Esportes, Política e Tecnologia</p>
+
+        </section>
+        <section id="noticias">
+            <h2>Exemplos de noticias</h2>
+            <p>Caixas são elementos que podem conter outros elementos. Elas podem ser usadas para agrupar conteúdo e aplicar estilos.</p>
+            <aside>
+                <p>Artigo escrito por Douglas Chambers AI</p>
+            </aside>
+            <article>
+                
+            </article>
+            </section>
+    </main>
+    <footer>
+        <p>Desenvolvido por C.D</p>
+    </footer>
+    <div id="bola"></div>
+</body>
+</html>
