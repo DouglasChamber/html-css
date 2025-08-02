@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício de Tabelas</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        table {
+            width: 600px;
+            height: 400px;
+            border-collapse: collapse;
+        }
+
+        caption {
+            font-size: 1.3em;
+            font-weight: bolder;
+            margin-bottom: 10px;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+
+        tr.destaque {
+            background-color: #f0f8ff;
+        }
+
+        col.cnome {
+            background-color: #e6f7ff;
+        }
+
+        col.csexo, col.cidade {
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exercício de Tabelas</h1>
+
+    <table>
+        <colgroup>
+            <col class="cnome">
+            <col class="csexo">
+            <col class="cidade">
+            <col class="cprofi">
+        
+        
+        </colgroup>
+        <caption>Cadastro</caption>
+        <tr>
+            <th scope="col">Nome</th>
+            <th scope="col">Sexo</th>
+            <th scope="col">Idade</th>
+            <th scope="col">Profissão</th>         
+        </tr>
+        <tr>
+            <td>Ana Maria</td>
+            <td>Feminino</td>
+            <td>30</td>
+            <td>Engenheira</td>
+        </tr>
+        <tr>
+            <td>Cláudio</td>
+            <td>Masculino</td>
+            <td>32</td>
+            <td>Professor</td>
+        </tr>
+        <tr>
+            <td>Douglas Chamber</td>
+            <td>Masculino</td>
+            <td>32</td>
+            <td>Programador</td>
+        </tr>
+        <tr>
+            <td>Maria</td>
+            <td>Feminino</td>
+            <td>22</td>
+            <td>Paisagista</td>
+        </tr>
+        <tr>
+            <td>Gustavo</td>
+            <td>Masculino</td>
+            <td>42</td>
+            <td>Médico</td>
+        </tr>
+        <tr>
+            <td>Hélio</td>
+            <td>Masculino</td>
+            <td>57</td>
+            <td>Jornalista</td>
+        </tr>
+        <tr>
+            <td>Maria Joana</td>
+            <td>Feminino</td>
+            <td>30</td>
+            <td>Bibliotecária</td>
+        </tr>
+    </table>
+</body>
+</html>

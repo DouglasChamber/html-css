@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas II</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        table {
+            width: 500px;
+            border-collapse: collapse;
+        }
+
+        td, th {
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+        caption {
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: lightgray;
+        }
+
+        thead, tfoot {
+            background-color: #383838;
+            color: white;
+        }
+
+        thead > tr > th {
+            position: sticky;
+            top: -1px;
+            background-color: #383838;;
+        }
+
+        tbody > tr:nth-child(2n) {
+            background-color: lightgrey;
+        }
+
+        td.num {
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <h1>Uso de Tabelas Grandes</h1>  
+    <!--
+        ANATOMIA PARA TABELAS GRANDES 
+        TABLE
+            THEAD = TR, TD, TH
+        TBODY = TR, TD, TH
+        TFOOT = TR, TD, TH
+    --> 
+
+    <table>
+        <caption>População dos Estados Brasileiros</caption>
+            <thead>
+                <th scope="col">Estado</th>
+                <th scope="col" style="width: 50px;">População</th>
+            </thead>
+        <tbody>
+            <tr>
+            <td>São Paulo</td>
+            <td class="num">45.000.000</td>
+            </tr>
+            <tr>
+                <td>Minas Gerais</td>
+                <td class="num">21.168.791</td>
+            </tr>
+            <tr>
+                <td>Rio de Janeiro</td>
+                <td class="num">17.264.943</td>
+            </tr>
+            <tr>
+                <td>Bahia</td>
+                <td class="num">14.198.881</td>
+            </tr>
+            <tr>
+                <td>Paraná</td>
+                <td class="num">11.433.957</td>
+            </tr>
+            <tr>
+                <td>Rio Grande do Sul</td>
+                <td class="num">11.374.015</td>
+            </tr>
+            <tr>
+                <td>Pernambuco</td>
+                <td class="num">09.557.071</td>
+            </tr>
+            <tr>
+                <td>Ceará</td>
+                <td class="num">09.132.078</td>
+            </tr>
+            <tr>
+                <td>Pará</td>
+                <td class="num">08.602.865</td>
+            </tr>
+            <tr>
+                <td>Santa Catarina</td>
+                <td class="num">07.164.788</td>
+            </tr>
+            <tr>
+                <td>Maranhão</td>
+                <td class="num">07.075.181</td>
+            </tr>
+            <tr>
+                <td>Goiás</td>
+                <td class="num">07.018.354</td>
+            </tr>
+            <tr>
+                <td>Amazonas</td>
+                <td class="num">04.144.597</td>
+            </tr>
+            <tr>
+                <td>Espírito Santo</td>
+                <td class="num">04.018.650</td>
+            </tr>
+            <tr>
+                <td>Rio Grande do Norte</td>
+                <td class="num">03.506.853</td>
+            </tr>
+            <tr>
+                <td>Mato Grosso</td>
+                <td class="num">03.484.466</td>
+            </tr>
+            <tr>
+                <td>Alagoas</td>
+                <td class="num">03.337.357</td>
+            </tr>
+            <tr>
+                <td>Piauí</td>
+                <td class="num">03.273.227</td>
+            </tr>
+            <tr>
+                <td>Distrito Federal</td>
+                <td class="num">03.015.268</td>
+            </tr>
+            <tr>
+                <td>Mato Grosso do Sul</td>
+                <td class="num">02.778.986</td>
+            </tr>
+            <tr>
+                <td>Sergipe</td>
+                <td class="num">02.298.696</td>
+            </tr>
+            <tr>
+                <td>Rondônia</td>
+                <td class="num">01.777.225</td>
+            </tr>
+            <tr>
+                <td>Tocantins</td>
+                <td class="num">01.572.866</td>
+            </tr>
+            <tr>
+                <td>Acre</td>
+                <td class="num">00.881.935</td>
+            </tr>
+            <tr>
+                <td>Amapá</td>
+                <td class="num">00.845.731</td>
+            </tr>
+            <tr>
+                <td>Roraima</td>
+                <td class="num">00.605.761</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th scope="row">Total de Habitantes</th>
+                <td class="num">210.147.125</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <h1>Tabelas em HTML5</h1>
+    <p>As tabelas em HTML5 são utilizadas para exibir dados de forma organizada em linhas e colunas. Embora o HTML5 tenha introduzido novas funcionalidades e semânticas à linguagem, a estrutura básica das tabelas permanece semelhante às versões anteriores do HTML. No entanto, o foco atual está em manter o conteúdo acessível e responsivo, alinhado às boas práticas da web moderna.</p>
+
+    <h2>Estrutura básica de uma tabela</h2>
+    <p>Estrutura básica de uma tabela
+Uma tabela em HTML é criada com a tag <table>. Dentro dela, geralmente são utilizadas as seguintes tags:
+
+<tr> (table row): define uma linha da tabela.
+
+<th> (table header): define uma célula de cabeçalho, geralmente em negrito e centralizada.
+
+<td> (table data): define uma célula de dados.
+
+Exemplo:
+html
+Copiar
+Editar
+<table>
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Idade</th>
+      <th>Profissão</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>João</td>
+      <td>30</td>
+      <td>Engenheiro</td>
+    </tr>
+    <tr>
+      <td>Ana</td>
+      <td>25</td>
+      <td>Designer</td>
+    </tr>
+  </tbody>
+</table>
+Novidades e boas práticas no HTML5
+Uso de <thead>, <tbody> e <tfoot>: Essas tags ajudam a dividir logicamente a tabela em seções, melhorando a acessibilidade e a organização do código.
+
+Acessibilidade: HTML5 incentiva o uso de atributos como scope, headers e summary para tornar as tabelas mais compreensíveis para leitores de tela.
+
+Responsividade: Embora o HTML puro não ofereça suporte nativo a tabelas responsivas, o HTML5 permite o uso combinado com CSS e JavaScript para adaptar tabelas a diferentes tamanhos de tela.
+
+Dicas de acessibilidade e semântica
+Use <caption> para adicionar um título à tabela.
+
+Adicione o atributo scope="col" ou scope="row" às células de cabeçalho para descrever a função daquela célula.
+
+Evite usar tabelas apenas para layout, pois isso compromete a semântica do documento.
+
+Exemplo com <caption> e scope:
+html
+Copiar
+Editar
+<table>
+  <caption>Lista de Funcionários</caption>
+  <thead>
+    <tr>
+      <th scope="col">Nome</th>
+      <th scope="col">Departamento</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Maria</td>
+      <td>Recursos Humanos</td>
+    </tr>
+  </tbody>
+</table>
+Conclusão
+As tabelas continuam sendo uma ferramenta importante no HTML5 para a apresentação de dados tabulares. Combinadas com boas práticas de acessibilidade e estilos modernos de CSS, elas podem ser tanto funcionais quanto visualmente atraentes. O uso correto da semântica ajuda na manutenção do código e na experiência de usuários com deficiência visual.</p>              
+</body>
+</html>
