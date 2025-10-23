@@ -1,0 +1,53 @@
+@charset "UTF-8";
+
+* { box-sizing: border-box; }
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #2c3e50;
+    color: white;
+    padding: 10px 20px;
+}
+
+header h1 { margin: 0; font-size: 24px; }
+
+i#burguer { cursor: pointer; font-size: 32px; display: block; }
+
+menu { display: none; }
+
+menu ul { list-style: none; margin:0; padding:0; }
+
+menu ul li { margin: 10px 0; }
+
+menu ul li a { text-decoration: none; color:white; font-weight: bold; }
+
+main {
+    padding: 10px 15px;
+    max-width: 960px;
+    margin: auto;
+}
+
+article { margin-bottom: 30px; }
+
+article h2 { color: #2c3e50; }
+
+article p, article ul { margin-bottom: 15px; }
+
+article ul li { margin-left: 20px; }
+
+footer {
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+}

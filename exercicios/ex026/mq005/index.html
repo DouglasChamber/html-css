@@ -1,49 +1,80 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Media Query</title>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="estilos/style.css">
-    <link rel="stylesheet" href="media-query.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Site Responsivo</title>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="estilos/style.css">
+<link rel="stylesheet" href="estilos/media-query.css">
 </head>
 <body>
-    <header>
-        <h1>Meu Site</h1>
-        <i id="burguer" class="material-icons" onclick="clickMenu()">menu</i>
-        <menu id="itens">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Sobre</a></li>
-                <li><a href="#">Clientes</a></li>
-                <li><a href="#">Patrocinadores</a></li>
-                <li><a href="#">Contato</a></li>
-            </ul>
-        </menu>
-    </header>
-    <main>
-        <article>
-            <h2>Testando Media Queries</h2>
+<header>
+    <h1>Meu Site</h1>
+    <i id="burguer" class="material-icons">menu</i>
+    <menu id="itens">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Sobre</a></li>
+            <li><a href="#">Serviços</a></li>
+            <li><a href="#">Clientes</a></li>
+            <li><a href="#">Contato</a></li>
+        </ul>
+    </menu>
+</header>
 
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae ipsa distinctio facere tempora doloremque dignissimos ipsam magnam esse, minus eius praesentium, libero possimus ex ducimus voluptate officia iste sint ad.
-            </p>
+<main>
+    <article>
+        <h2>Bem-vindo ao nosso site</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus fermentum urna at purus volutpat, nec volutpat sapien ultricies. Sed convallis lectus sed justo viverra, ac facilisis tortor pulvinar.</p>
+        <p>Oferecemos soluções completas para empresas que desejam melhorar sua presença digital e otimizar processos internos.</p>
+    </article>
 
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis distinctio nihil exercitationem et itaque similique sit, aut veniam, quibusdam natus in vero consequuntur, error tempore corporis temporibus quae! Iusto, sunt?</p>
+    <article>
+        <h2>Serviços</h2>
+        <ul>
+            <li>Desenvolvimento de sites e aplicativos</li>
+            <li>Marketing digital e SEO</li>
+            <li>Consultoria em tecnologia</li>
+            <li>Suporte e manutenção</li>
+        </ul>
+    </article>
 
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero explicabo, repellat reprehenderit atque veritatis architecto aliquid maxime qui magni accusamus, consequatur delectus! Eligendi, repellat illum quam deleniti cumque aut id.</p>
+    <article>
+        <h2>Clientes</h2>
+        <p>Atendemos empresas de diferentes setores, desde startups até grandes corporações, entregando soluções personalizadas.</p>
+    </article>
+</main>
 
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestias consequuntur vero error repellendus fugit consectetur voluptatem assumenda a! Eaque at, ullam vitae accusamus quis quidem cupiditate unde repudiandae esse quia?</p>
-        </article>
-    </main>
-    <script>
-        function clickMenu() {
-            if (itens.style.display == 'block') {
-                itens.style.display = 'none'
-            } else {
-                itens.style.display = 'block'
-            }
-        }
-    </script>
+<footer>
+    <p>© 2025 Meu Site - Todos os direitos reservados</p>
+</footer>
+
+<script>
+const itens = document.getElementById('itens');
+const burguer = document.getElementById('burguer');
+
+// Alterna menu apenas em telas pequenas
+function clickMenu() {
+    if (window.innerWidth < 768) {
+        itens.style.display = itens.style.display === 'block' ? 'none' : 'block';
+    }
+}
+
+// Ajusta menu e hambúrguer ao redimensionar
+function mudouTamanho() {
+    if (window.innerWidth >= 768) {
+        itens.style.display = 'block';      // menu sempre visível
+        burguer.style.display = 'none';     // esconde hambúrguer
+    } else {
+        itens.style.display = 'none';       // menu escondido
+        burguer.style.display = 'block';    // mostra hambúrguer
+    }
+}
+
+burguer.addEventListener('click', clickMenu);
+window.addEventListener('resize', mudouTamanho);
+window.addEventListener('load', mudouTamanho);
+</script>
 </body>
 </html>
