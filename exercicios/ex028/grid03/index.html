@@ -7,15 +7,12 @@
     <style>
         div.container {
             border: 3px solid blue;
-            height: 250px;
             display: grid;
-            grid-template-columns: auto auto auto;
-            grid-template-rows: auto auto auto;
+            grid-template-rows: repeat(3, 80px);
+            grid-template-columns: 100px 40% repeat(2, 1fr);
             gap: 10px;
-            align-items: normal;
-            justify-items: normal;
-            align-content: normal;
-            justify-content: normal;
+            place-items: normal normal;
+            place-content: normal normal;
         }
 
         div.item {
@@ -33,6 +30,9 @@
         <div class="item">Item 5</div>
         <div class="item">Item 6</div>
         <div class="item">Item 7</div>
+        <div class="item">Item 8</div>
+        <div class="item">Item 9</div>
+        <div class="item">Item 10</div>
     </div>
 </body>
 </html>
